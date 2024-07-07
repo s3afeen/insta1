@@ -1,0 +1,191 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Ubuntu:wght@300;400;500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    min-height: 100vh;
+    margin: auto;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-div form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 3vh 2vw;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.form-div form .Instagram-logo {
+    width: 200px;
+    margin: 20px 0;
+}
+
+.form-div form .input {
+    width: 90%;
+    padding: .6rem;
+    border-radius: 3px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    margin: 3px;
+}
+
+.input:active{
+    border-color: #0095f6;
+}
+
+.login-btn {
+    width: 97%;
+    padding: 10px;
+    font-weight: 700;
+    background-color: #0095f6;
+    border: none;
+    border-radius: 5px;
+    margin: 8px 0px;
+    color: white;
+}
+
+#or {
+    font-size: small;
+    margin: 10px 0px;
+}
+
+#or:before,
+#or:after {
+    content: '________________________';
+    color: rgba(128, 128, 128, 0.7);
+    margin: 0 10px;
+}
+
+.fb-login {
+    font-weight: 700;
+    font-size: 95%;
+    color:#385185;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.forgot{
+    font-size: small;
+    color: #00376B;
+}
+
+.sign-up {
+    text-align: center;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    padding: 10px 0px;
+    margin: 10px 0px 20px;
+}
+
+.sign-link{
+    font-size: small;
+    padding: 10px;
+}
+
+
+.sign-link2{
+    color:#0095f6;
+}
+
+.get-app {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.store {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+#play {
+    width: 160px;
+    padding: 5px;
+}
+
+#microsoft {
+    width: 135px;
+    padding: 5px;
+}
+
+
+
+@media (max-width: 1000px) {
+    .phoneImeg {
+        display: none;
+    }
+
+    main {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    form-div form {
+        padding: 2vh 1vw;
+    }
+    .form-div form .Instagram-logo {
+        width: 150px;
+        margin: 10px 0;
+    }
+    .form-div form .input {
+        width: 80%;
+        padding: .4rem;
+    }
+    .login-btn {
+        width: 85%;
+        padding: 8px;
+    }
+    .fb-login {
+        font-size: 85%;
+    }
+    .sign-up {
+        padding: 5px 0;
+        margin: 5px 0 10px;
+    }
+    .sign-link {
+        font-size: smaller;
+    }
+    .get-app .store {
+        flex-direction: column;
+        padding: 20px;
+    }
+    #play, #microsoft {
+        width: 120px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-div form .Instagram-logo {
+        width: 100px;
+    }
+    .form-div form .input {
+        width: 70%;
+    }
+    .login-btn {
+        width: 75%;
+    }
+    .fb-login {
+        font-size: 75%;
+    }
+}

